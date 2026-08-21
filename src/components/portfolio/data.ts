@@ -15,10 +15,10 @@ export const CONTACT = {
 
 const WA_NUMBER = "916281753550";
 export const WHATSAPP_CONNECT = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(
-  "Hey, I checked out your portfolio and would love to connect to see if we can work together.",
+  "Hello Sai Varun, I came across your portfolio and would love to connect with you to discuss potential opportunities.",
 )}`;
 export const WHATSAPP_RESUME = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(
-  "Hey, i checked out ur portfolio and wld like to get ur resume",
+  "Hello Sai Varun, I reviewed your portfolio and would like to request a copy of your resume.",
 )}`;
 
 export const ABOUT_LINES = [
@@ -272,12 +272,12 @@ export const TESTIMONIALS = [
 ];
 
 export const ADDITIONAL_SKILLS = [
-  { name: "Code", note: "" },
-  { name: "Draw", note: "" },
-  { name: "Dance", note: "" },
-  { name: "Taekwondo", note: "Green Belt" },
-  { name: "Football", note: "" },
-  { name: "Animate", note: "" },
+  { name: "Code", label: "I code" },
+  { name: "Draw", label: "I draw" },
+  { name: "Dance", label: "I dance" },
+  { name: "Taekwondo", label: "I practice Taekwondo" },
+  { name: "Football", label: "I play football" },
+  { name: "Animate", label: "I animate" },
 ];
 
 export const LANGUAGES = [
