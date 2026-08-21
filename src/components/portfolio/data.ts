@@ -58,6 +58,7 @@ export type Project = {
   features: string[];
   learnt: string[];
   github: string;
+  hideDetails?: boolean;
 };
 
 export const PROJECTS: Project[] = [
@@ -165,9 +166,30 @@ export const PROJECTS: Project[] = [
     ],
     github: "https://github.com/saivarun-hub/AI-Curriculum-Platform",
   },
+  {
+    slug: "personal-portfolio",
+    index: "05",
+    title: "PERSONAL PORTFOLIO",
+    description:
+      "A fully designed and developed personal portfolio website, showcasing my skills, projects, and creative design approach.",
+    tech: ["HTML5", "CSS3", "JavaScript", "Figma"],
+    overview:
+      "A fully designed and developed personal portfolio website, showcasing my skills, projects, and creative design approach.",
+    features: [
+      "Modern dark theme portfolio interface with smooth motion physics.",
+      "Interactive skill bubbles, project showcases, and experience timelines.",
+      "Clean UI component design and responsive layout across all device sizes.",
+    ],
+    learnt: [
+      "Designing clean user interfaces and interactive web components.",
+      "Building motion-enhanced portfolio showcases.",
+    ],
+    github: "",
+    hideDetails: true,
+  },
 ];
 
-export const FEATURED_PROJECTS = PROJECTS.slice(0, 3);
+export const FEATURED_PROJECTS = PROJECTS;
 
 export const EDUCATION = [
   {

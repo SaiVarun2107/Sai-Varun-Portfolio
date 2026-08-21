@@ -32,25 +32,29 @@ export function ProjectCard({ project }: { project: Project }) {
         <p className="max-w-xs text-base leading-relaxed text-foreground/90">
           {project.description}
         </p>
-        <div className="flex items-center gap-3">
-          <Link
-            to="/projects/$slug"
-            params={{ slug: project.slug }}
-            className="inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-semibold text-background transition-transform duration-300 hover:scale-105"
-          >
-            Explore details
-            <ArrowRight size={16} />
-          </Link>
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="View on GitHub"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border bg-secondary text-foreground transition-transform duration-300 hover:scale-105 hover:bg-accent"
-          >
-            <Github size={18} />
-          </a>
-        </div>
+        {!project.hideDetails && (
+          <div className="flex items-center gap-3">
+            <Link
+              to="/projects/$slug"
+              params={{ slug: project.slug }}
+              className="inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-semibold text-background transition-transform duration-300 hover:scale-105"
+            >
+              Explore details
+              <ArrowRight size={16} />
+            </Link>
+            {project.github && (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="View on GitHub"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border bg-secondary text-foreground transition-transform duration-300 hover:scale-105 hover:bg-accent"
+              >
+                <Github size={18} />
+              </a>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );
