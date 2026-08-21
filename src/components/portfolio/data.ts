@@ -82,7 +82,7 @@ export const PROJECTS: Project[] = [
       "Building server-rendered Flask applications end to end.",
       "Structuring maintainable frontend code.",
     ],
-    github: "https://github.com/saivarun-hub/CareerSync",
+    github: "",
   },
   {
     slug: "customer-churn-prediction",
@@ -103,7 +103,7 @@ export const PROJECTS: Project[] = [
       "Model evaluation beyond accuracy.",
       "Shipping ML models as usable apps.",
     ],
-    github: "https://github.com/saivarun-hub/Customer-Churn-Prediction",
+    github: "https://github.com/SaiVarun2107/Custromer-Churn-Project",
   },
   {
     slug: "house-price-prediction",
@@ -131,7 +131,7 @@ export const PROJECTS: Project[] = [
       "Feature importance with ensemble models.",
       "Building reproducible ML workflows.",
     ],
-    github: "https://github.com/saivarun-hub/House-Price-Prediction",
+    github: "https://github.com/SaiVarun2107/House_Price_Prediction",
   },
   {
     slug: "ai-curriculum-platform",
@@ -164,7 +164,7 @@ export const PROJECTS: Project[] = [
       "Working with vector databases and embeddings.",
       "Full-stack architecture with Next.js, Prisma and Postgres.",
     ],
-    github: "https://github.com/saivarun-hub/AI-Curriculum-Platform",
+    github: "https://github.com/SaiVarun2107/AI-Powered-Student-Parent-Learning-Platform",
   },
   {
     slug: "personal-portfolio",
@@ -189,7 +189,7 @@ export const PROJECTS: Project[] = [
   },
 ];
 
-export const FEATURED_PROJECTS = PROJECTS;
+export const FEATURED_PROJECTS = PROJECTS.slice(0, 3);
 
 export const EDUCATION = [
   {

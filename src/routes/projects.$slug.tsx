@@ -103,26 +103,28 @@ function ProjectDetail() {
         </section>
 
         {/* GitHub Source Link Subheading */}
-        <section className="mt-16 border-t border-border pt-12">
-          <h2 className="text-2xl font-semibold text-foreground">
-            Source Code &amp; Repository
-          </h2>
-          <p className="mt-3 text-base text-muted-foreground">
-            Explore the full codebase, documentation, and implementation details on GitHub:
-          </p>
-          <div className="mt-6">
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-3 rounded-2xl border border-border bg-secondary/80 px-7 py-4 text-base font-semibold text-foreground transition-all duration-300 hover:bg-accent hover:border-foreground/40 hover:scale-[1.02]"
-            >
-              <Github size={22} />
-              <span>{project.github}</span>
-              <ExternalLink size={16} className="opacity-70" />
-            </a>
-          </div>
-        </section>
+        {project.github && (
+          <section className="mt-16 border-t border-border pt-12">
+            <h2 className="text-2xl font-semibold text-foreground">
+              Source Code &amp; Repository
+            </h2>
+            <p className="mt-3 text-base text-muted-foreground">
+              Explore the full codebase, documentation, and implementation details on GitHub:
+            </p>
+            <div className="mt-6">
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-3 rounded-2xl border border-border bg-secondary/80 px-7 py-4 text-base font-semibold text-foreground transition-all duration-300 hover:bg-accent hover:border-foreground/40 hover:scale-[1.02]"
+              >
+                <Github size={22} />
+                <span>{project.github}</span>
+                <ExternalLink size={16} className="opacity-70" />
+              </a>
+            </div>
+          </section>
+        )}
       </div>
     </main>
   );
