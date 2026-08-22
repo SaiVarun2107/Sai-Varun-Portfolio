@@ -36,7 +36,7 @@ export const SKILL_GROUPS = [
   },
   {
     title: "Web Development",
-    items: ["HTML", "CSS", "JavaScript"],
+    items: ["HTML", "CSS", "JavaScript", "TypeScript"],
   },
   {
     title: "Database & Backend",
