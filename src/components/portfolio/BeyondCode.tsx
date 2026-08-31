@@ -106,7 +106,7 @@ export function BeyondCode() {
         <SectionHeading>Additional Skills</SectionHeading>
         <Reveal>
           <p className="mx-auto mt-4 max-w-xl text-xs text-muted-foreground sm:mt-6 sm:text-base">
-            I'm a canvas of many skills — but I choose to paint with code.
+            A blend of many skills, expressed through code, creativity, and passion.
           </p>
           <p className="mt-2 text-xs text-muted-foreground/60 flex items-center justify-center gap-1.5">
             <Sparkles size={13} className="text-foreground/70 animate-pulse" />

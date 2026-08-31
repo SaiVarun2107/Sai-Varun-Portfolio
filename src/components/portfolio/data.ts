@@ -63,79 +63,36 @@ export type Project = {
 
 export const PROJECTS: Project[] = [
   {
-    slug: "careersync",
+    slug: "campusfix",
     index: "01",
-    title: "CareerSync",
+    title: "CampusFix",
     description:
-      "Student-focused platform for discovering and managing internships, scholarships, events and career opportunities.",
-    tech: ["Python", "Flask", "MySQL", "HTML", "CSS", "JavaScript"],
+      "A centralized campus issue tracking platform that helps students report problems and enables staff and administrators to manage, approve, and track their resolution.",
+    tech: ["Next.js", "TypeScript", "PostgreSQL", "Supabase", "Tailwind CSS", "REST API"],
     overview:
-      "A student-focused platform that brings internships, scholarships, events and other career opportunities into one organized place, so students no longer have to track them across scattered sources.",
+      "CampusFix is a role-based campus issue tracking system designed to streamline the process of reporting, assigning, approving, and resolving college campus issues. Students can report problems with detailed information and attachments, while administrators manage assignments and approve staff work before resolution begins. Staff members can then update progress and resolve assigned issues, providing students with transparent visibility throughout the issue lifecycle.",
     features: [
-      "Centralized listing of internships, scholarships and events.",
-      "Category-wise browsing and search.",
-      "Clean, lightweight interface for quick access.",
-      "MySQL-backed data management with a Flask service layer.",
+      "Student Issue Reporting — Students can report campus problems by providing the issue title, category, location, description, priority, and supporting image attachments.",
+      "Issue Tracking — Students can view their reported issues and track their current status and progress history.",
+      "Admin-Controlled Staff Approval — Staff members must request permission from an administrator before beginning work on an assigned issue.",
+      "Staff Assignment & Progress Updates — Administrators can assign issues to appropriate staff members, while approved staff can update the progress of the work.",
+      "Role-Based Dashboards — Separate dashboards are provided for Students, Staff, and Administrators based on their responsibilities and permissions.",
+      "Issue Analytics — Administrators can view issue statistics and category-based analytics to identify common campus problems and monitor resolution trends.",
     ],
     learnt: [
-      "Designing and querying relational schemas.",
-      "Building server-rendered Flask applications end to end.",
-      "Structuring maintainable frontend code.",
+      "Designing Role-Based Application Workflows — Learned how to design different workflows and permissions for students, staff, and administrators.",
+      "Authentication & Authorization — Learned how authentication and role-based authorization can control access to different parts of an application.",
+      "Relational Database Design — Learned how to model users, issues, locations, categories, assignments, updates, and approval requests as related data entities.",
+      "Approval-Based Business Logic — Learned how to implement controlled workflows where staff cannot begin work until an administrator grants permission.",
+      "Issue State Management — Learned how to design and manage a structured issue lifecycle from submission through resolution.",
+      "Dashboard & Data Visualization — Learned how to present operational information through dashboards, statistics, filters, and category-based visualizations.",
+      "Responsive UI/UX — Learned how to design interfaces that work across desktop and mobile devices while maintaining a consistent user experience.",
     ],
-    github: "",
-  },
-  {
-    slug: "customer-churn-prediction",
-    index: "02",
-    title: "Customer Churn Prediction",
-    description:
-      "Machine learning application that predicts telecom customer churn.",
-    tech: ["Python", "Pandas", "NumPy", "Scikit-learn", "Streamlit"],
-    overview:
-      "A machine learning application that predicts whether a telecom customer is likely to churn, wrapped in an interactive Streamlit interface for quick experimentation.",
-    features: [
-      "Data cleaning and feature engineering pipeline.",
-      "Multiple classification models with performance comparison.",
-      "Interactive Streamlit app for live predictions.",
-    ],
-    learnt: [
-      "Handling imbalanced classification data.",
-      "Model evaluation beyond accuracy.",
-      "Shipping ML models as usable apps.",
-    ],
-    github: "https://github.com/SaiVarun2107/Custromer-Churn-Project",
-  },
-  {
-    slug: "house-price-prediction",
-    index: "03",
-    title: "House Price Prediction",
-    description:
-      "Machine learning application for predicting house prices using regression models.",
-    tech: [
-      "Python",
-      "Pandas",
-      "NumPy",
-      "Scikit-learn",
-      "Random Forest",
-      "Streamlit",
-    ],
-    overview:
-      "A regression-based application that estimates house prices from property attributes, comparing linear and ensemble models to find the best fit.",
-    features: [
-      "Exploratory data analysis and outlier handling.",
-      "Linear regression and Random Forest comparison.",
-      "Streamlit interface for instant price estimates.",
-    ],
-    learnt: [
-      "Regression metrics and error analysis.",
-      "Feature importance with ensemble models.",
-      "Building reproducible ML workflows.",
-    ],
-    github: "https://github.com/SaiVarun2107/House_Price_Prediction",
+    github: "https://github.com/SaiVarun2107/CampusFix",
   },
   {
     slug: "ai-curriculum-platform",
-    index: "04",
+    index: "02",
     title: "AI Curriculum & Assessment Platform",
     description:
       "AI-powered education platform using curriculum data, RAG, vector search and Gemini to generate syllabus-aware assessments.",
@@ -167,8 +124,79 @@ export const PROJECTS: Project[] = [
     github: "https://github.com/SaiVarun2107/AI-Powered-Student-Parent-Learning-Platform",
   },
   {
-    slug: "personal-portfolio",
+    slug: "customer-churn-prediction",
+    index: "03",
+    title: "Customer Churn Prediction",
+    description:
+      "Machine learning application that predicts telecom customer churn.",
+    tech: ["Python", "Pandas", "NumPy", "Scikit-learn", "Streamlit"],
+    overview:
+      "A machine learning application that predicts whether a telecom customer is likely to churn, wrapped in an interactive Streamlit interface for quick experimentation.",
+    features: [
+      "Data cleaning and feature engineering pipeline.",
+      "Multiple classification models with performance comparison.",
+      "Interactive Streamlit app for live predictions.",
+    ],
+    learnt: [
+      "Handling imbalanced classification data.",
+      "Model evaluation beyond accuracy.",
+      "Shipping ML models as usable apps.",
+    ],
+    github: "https://github.com/SaiVarun2107/Custromer-Churn-Project",
+  },
+  {
+    slug: "house-price-prediction",
+    index: "04",
+    title: "House Price Prediction",
+    description:
+      "Machine learning application for predicting house prices using regression models.",
+    tech: [
+      "Python",
+      "Pandas",
+      "NumPy",
+      "Scikit-learn",
+      "Random Forest",
+      "Streamlit",
+    ],
+    overview:
+      "A regression-based application that estimates house prices from property attributes, comparing linear and ensemble models to find the best fit.",
+    features: [
+      "Exploratory data analysis and outlier handling.",
+      "Linear regression and Random Forest comparison.",
+      "Streamlit interface for instant price estimates.",
+    ],
+    learnt: [
+      "Regression metrics and error analysis.",
+      "Feature importance with ensemble models.",
+      "Building reproducible ML workflows.",
+    ],
+    github: "https://github.com/SaiVarun2107/House_Price_Prediction",
+  },
+  {
+    slug: "careersync",
     index: "05",
+    title: "CareerSync",
+    description:
+      "Student-focused platform for discovering and managing internships, scholarships, events and career opportunities.",
+    tech: ["Python", "Flask", "MySQL", "HTML", "CSS", "JavaScript"],
+    overview:
+      "A student-focused platform that brings internships, scholarships, events and other career opportunities into one organized place, so students no longer have to track them across scattered sources.",
+    features: [
+      "Centralized listing of internships, scholarships and events.",
+      "Category-wise browsing and search.",
+      "Clean, lightweight interface for quick access.",
+      "MySQL-backed data management with a Flask service layer.",
+    ],
+    learnt: [
+      "Designing and querying relational schemas.",
+      "Building server-rendered Flask applications end to end.",
+      "Structuring maintainable frontend code.",
+    ],
+    github: "",
+  },
+  {
+    slug: "personal-portfolio",
+    index: "06",
     title: "PERSONAL PORTFOLIO",
     description:
       "A fully designed and developed personal portfolio website, showcasing my skills, projects, and creative design approach.",

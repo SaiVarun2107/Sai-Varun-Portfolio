@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { NAV_ITEMS } from "./data";
+import { ThemeSwitcher } from "./ThemeSwitcher";
 
 export function Navbar() {
   const [active, setActive] = useState("#home");
@@ -56,7 +57,7 @@ export function Navbar() {
       className="fixed inset-x-0 top-4 z-50"
     >
       <nav className="mx-auto w-[min(1180px,calc(100%-1.25rem))] rounded-2xl border border-border bg-card/85 backdrop-blur-md shadow-lg sm:w-[min(1180px,calc(100%-2rem))]">
-        {/* Desktop Navbar Layout: Brand on Left, Links on Right */}
+        {/* Desktop Navbar Layout: Brand on Left, Links & ThemeSwitcher on Right */}
         <div className="hidden md:flex items-center justify-between px-6 py-2.5">
           <a
             href="#home"
@@ -75,24 +76,28 @@ export function Navbar() {
             </span>
           </a>
 
-          <div className="flex items-center gap-1">
-            {NAV_ITEMS.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className={`rounded-xl px-3.5 py-1.5 text-center text-sm font-medium transition-all duration-300 ${
-                  active === item.href
-                    ? "bg-accent text-accent-foreground font-semibold shadow-sm ring-1 ring-white/10"
-                    : "text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                {item.label}
-              </a>
-            ))}
+          <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1">
+              {NAV_ITEMS.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className={`rounded-xl px-3.5 py-1.5 text-center text-sm font-medium transition-all duration-300 ${
+                    active === item.href
+                      ? "bg-accent text-accent-foreground font-semibold shadow-sm ring-1 ring-white/10"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
+            <div className="h-4 w-px bg-border/80 mx-0.5" />
+            <ThemeSwitcher />
           </div>
         </div>
 
-        {/* Mobile Navbar Layout: Brand on Left, Hamburger on Right */}
+        {/* Mobile Navbar Layout: Brand on Left, Theme Switcher & Hamburger on Right */}
         <div className="flex items-center justify-between px-4 py-3 sm:px-5 md:hidden">
           <a href="#home" className="flex items-center gap-2 eyebrow text-xs font-semibold text-foreground/90 tracking-wider">
             Sai Varun
@@ -101,13 +106,16 @@ export function Navbar() {
               style={{ backgroundColor: "var(--theme-badge-dot)" }}
             />
           </a>
-          <button
-            aria-label="Toggle menu"
-            onClick={() => setOpen((v) => !v)}
-            className="flex h-9 w-9 items-center justify-center rounded-lg text-foreground transition-colors hover:bg-accent active:bg-accent/80"
-          >
-            {open ? <X size={20} /> : <Menu size={20} />}
-          </button>
+          <div className="flex items-center gap-2">
+            <ThemeSwitcher />
+            <button
+              aria-label="Toggle menu"
+              onClick={() => setOpen((v) => !v)}
+              className="flex h-9 w-9 items-center justify-center rounded-lg text-foreground transition-colors hover:bg-accent active:bg-accent/80"
+            >
+              {open ? <X size={20} /> : <Menu size={20} />}
+            </button>
+          </div>
         </div>
 
         <AnimatePresence>
