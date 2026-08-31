@@ -8,6 +8,8 @@ import { Journey } from "@/components/portfolio/Journey";
 import { Testimonials } from "@/components/portfolio/Testimonials";
 import { BeyondCode } from "@/components/portfolio/BeyondCode";
 import { Contact } from "@/components/portfolio/Contact";
+import { ThemeSwitcher } from "@/components/portfolio/ThemeSwitcher";
+import { ScrollToTop } from "@/components/portfolio/ScrollToTop";
 
 const title = "Thokala Sai Varun — CSE (AI & Data Science) Portfolio";
 const description =
@@ -39,6 +41,8 @@ function Index() {
       <Testimonials />
       <BeyondCode />
       <Contact />
+      <ThemeSwitcher />
+      <ScrollToTop />
     </main>
   );
 }

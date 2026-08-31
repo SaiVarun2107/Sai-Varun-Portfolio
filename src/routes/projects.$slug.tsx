@@ -116,11 +116,11 @@ function ProjectDetail() {
                 href={project.github}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-3 rounded-2xl border border-border bg-secondary/80 px-7 py-4 text-base font-semibold text-foreground transition-all duration-300 hover:bg-accent hover:border-foreground/40 hover:scale-[1.02]"
+                className="inline-flex max-w-full items-center gap-3 rounded-2xl border border-border bg-secondary/80 px-4 py-3 text-sm font-semibold text-foreground transition-all duration-300 hover:bg-accent hover:border-foreground/40 hover:scale-[1.02] sm:px-7 sm:py-4 sm:text-base"
               >
-                <Github size={22} />
-                <span>{project.github}</span>
-                <ExternalLink size={16} className="opacity-70" />
+                <Github size={20} className="shrink-0 sm:h-5.5 sm:w-5.5" />
+                <span className="truncate">{project.github}</span>
+                <ExternalLink size={16} className="shrink-0 opacity-70" />
               </a>
             </div>
           </section>

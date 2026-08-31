@@ -18,8 +18,7 @@ export function Projects() {
 
       <Reveal>
         <p className="mt-10 text-center text-sm text-muted-foreground">
-          Hover on each project to learn more about its features, tools, and
-          outcomes.
+          Explore each project to learn more about its features, tools, and outcomes.
         </p>
       </Reveal>
 

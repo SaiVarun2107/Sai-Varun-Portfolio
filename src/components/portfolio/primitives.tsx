@@ -26,10 +26,15 @@ export function Reveal({
 export function SectionHeading({ children }: { children: ReactNode }) {
   return (
     <Reveal>
-      <h2 className="eyebrow text-3xl sm:text-4xl md:text-5xl text-foreground">
+      <h2
+        className="eyebrow text-3xl sm:text-4xl md:text-5xl bg-clip-text text-transparent transition-all duration-700"
+        style={{
+          backgroundImage: "linear-gradient(135deg, var(--theme-heading-from), var(--theme-heading-to))",
+        }}
+      >
         {children}
       </h2>
-      <div className="mt-6 h-px w-full bg-border" />
+      <div className="mt-6 h-px w-full bg-border transition-colors duration-500" />
     </Reveal>
   );
 }
